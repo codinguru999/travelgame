@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Login</title>
+    <script src="login.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <style>
+        #boatwithman{
+            /* animation: travel 5s linear 1s 1; */
+            width: 8rem !important;
+            
+        }
+        /* @keyframes travel{
+            0%{margin-left: 0;}
+            100%{margin-left: 30rem;}
+        } */
+    </style>
+</head>
+<body>
+    <div class="container-fluid bg-dark d-flex flex-column px-0" style="height:100vh; width:100vw">
+        <div class="container-fluid w-100 h-50 bg-transparent mx-0 px-0 d-flex flex-row justify-content-center align-item-center">
+            <button class="btn btn-primary btn-larger border rounded m-auto" id="play" onclick="playgame()">Play</button>
+            <button class="btn btn-primary btn-larger border rounded d-none m-auto" id="go" onclick="travel()">Go</button>
+        </div>
+        <div class="container-fluid w-100 h-50 d-flex flex-column mx-0 px-0">
+            <!-- <div class="container-fluid w-100 h-25 mx-0 px-0"></div> -->
+            <div class="container-fluid w-100 mx-0 px-0 h-100 d-flex flex-row">
+                
+                <div class="container-fluid flex-wrap w-25 bg-success d-flex flex-row justify-content-center align-item-center" id="firstground" style="background-image: url('seamless-textured-grass-natural-grass-pattern_172107-1308.avif'); background-repeat: round;">
+                    
+                    <img id="goat" src="51-519320_goat-png-brown-goat-png-transparent-png-removebg-preview (1).png" alt="" class="w-50 h-50">
+                    <img id="lion" src="png-clipart-lion-graphy-lion-mammal-animals-thumbnail-removebg-preview.png" alt="" class="w-50 h-50">
+                    <img id="grass" src="png-clipart-wheatgrass-common-wheat-leaf-vegetable-herb-sodium-bicarbonate-others-leaf-vegetable-grass-removebg-preview.png" alt="" class="w-50 h-50">
+                </div>
+                <div class="container-fluid w-50 bg-primary" style="background-image: url('tumblr_0db97c0582192012eccfed15f937e6f5_ec85acc7_500.gif'); background-repeat: round; height: 100%; ">
+                    <div id="boatwithman">
+                        <img src="lovepik-a-man-rowing-a-boat-png-image_401099421_wh1200-removebg-preview.png" class="w-100 mx-0 px-0 h-50" alt="">
+                        <img src="png-clipart-lion-graphy-lion-mammal-animals-thumbnail-removebg-preview.png" id='imgcng' class="z-1 position-absolute d-none" style="width: 50px; height: 50px; margin-top: 24px; margin-left: -65px;" alt="" onclick="elementremove()">
+                    </div>
+                </div>
+                <div class="container-fluid flex-wrap w-25 bg-success d-flex flex-row justify-content-center align-item-center" id="secondground" style="background-image: url('seamless-textured-grass-natural-grass-pattern_172107-1308.avif'); background-repeat: round;">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <button type="button" id="launchmodal" class="btn btn-primary d-none" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+        Launch demo modal
+      </button>
+      <!-- <div class="modal-dialog modal-dialog-centered">
+        ...
+      </div> -->
+      <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="staticBackdropLabel">You lose the game</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" onclick="location.reload()" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              You have to restart the game
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" onclick="location.reload()" data-bs-dismiss="modal">Refresh</button>
+              <!-- <button type="button" class="btn btn-primary">Understood</button> -->
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    <script src="index.js"></script>
+    <!-- <h3 class="m-auto text-center my-3"></h3> -->
+      <!-- <iframe id="website" src="" frameborder="0" class="w-100 h-75"></iframe> -->
+      <!-- <a id="redi"></a> -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+  </body>
+</html>
